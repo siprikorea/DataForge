@@ -1,6 +1,9 @@
-package org.siprikorea
+package model
 
-interface DataProcessor {
+interface ModelDataProc {
+    val name: String
+
     @Throws(Exception::class)
     fun process(inputs: List<ByteArray>, options: Map<String, String>): List<ByteArray>
 }
+

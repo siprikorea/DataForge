@@ -20,6 +20,9 @@ dependencies {
     // compose.desktop.currentOs should be used in launcher-sourceSet
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
+    implementation("org.bouncycastle:bcprov-jdk18on:1.79")
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.79")
+    implementation("org.bouncycastle:bcutil-jdk18on:1.79")
     implementation(compose.desktop.currentOs)
 }
 
