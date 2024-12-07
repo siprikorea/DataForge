@@ -24,10 +24,8 @@ fun ViewDataMain() {
             modifier = Modifier
                 .weight(2f)
                 .fillMaxHeight()
-                .background(Color.White)
         ) {
             ViewDataInput()
-            ViewDataProcBase64Encoder()
         }
     }
 }

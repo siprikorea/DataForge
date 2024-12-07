@@ -2,21 +2,31 @@ package view.element
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
 fun ViewElementOptions(options: Map<String, List<String>>) {
-    Row {
+    Row(
+        modifier = Modifier.padding(vertical = ViewConstant.SizePadding),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         if (options.isEmpty()) {
             return
         }
 
         options.forEach { (key, options) ->
-            Text(key)
+            Text(
+                text = key,
+                color = ViewConstant.ColorOptionTitle,
+                fontSize = ViewConstant.FontSizeOption,
+                modifier = Modifier.padding(end = ViewConstant.SizePadding)
+            )
             Option(options)
         }
     }
