@@ -1,4 +1,4 @@
-package view
+package view.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text

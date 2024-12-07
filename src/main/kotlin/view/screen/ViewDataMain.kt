@@ -1,4 +1,4 @@
-package view
+package view.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -26,7 +26,7 @@ fun ViewDataMain() {
                 .fillMaxHeight()
                 .background(Color.White)
         ) {
-            ViewDataProcHexEncoder()
+            ViewDataInput()
             ViewDataProcBase64Encoder()
         }
     }
