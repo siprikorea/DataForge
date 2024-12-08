@@ -8,7 +8,7 @@ import androidx.compose.ui.unit.sp
 
 val DefaultBorderModifier = Modifier.border(width = 1.dp, color = Color.Gray)
 
-class ViewConstant {
+class ElementConstant {
     companion object {
         // Color
         val ColorBorder = Color(225, 225, 225)
@@ -25,7 +25,8 @@ class ViewConstant {
         val IconSmall = 14.dp
 
         // Padding
-        val PaddingOutside = 24.dp
-        val Padding = 8.dp
+        val PaddingWide = 24.dp
+        val PaddingMedium = 16.dp
+        val PaddingNarrow = 8.dp
     }
 }
