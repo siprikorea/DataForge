@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun ViewElementOptions(options: Map<String, List<String>>) {
     Row(
-        modifier = Modifier.padding(vertical = ViewConstant.SizePadding),
+        modifier = Modifier.padding(vertical = ViewConstant.Padding),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (options.isEmpty()) {
@@ -24,8 +24,8 @@ fun ViewElementOptions(options: Map<String, List<String>>) {
             Text(
                 text = key,
                 color = ViewConstant.ColorOptionTitle,
-                fontSize = ViewConstant.FontSizeOption,
-                modifier = Modifier.padding(end = ViewConstant.SizePadding)
+                fontSize = ViewConstant.FontMedium,
+                modifier = Modifier.padding(end = ViewConstant.Padding)
             )
             Option(options)
         }

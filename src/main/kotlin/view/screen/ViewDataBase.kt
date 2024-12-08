@@ -11,6 +11,7 @@ import view.element.ViewConstant
 import view.element.ViewElementOptions
 import view.element.ViewElementTitle
 
+
 @Composable
 fun ViewDataBase(
     icon: ImageVector,
@@ -22,7 +23,7 @@ fun ViewDataBase(
         modifier = Modifier
             .border(2.dp, ViewConstant.ColorBorder, shape = RoundedCornerShape(24.dp))
             .height(480.dp)
-            .padding(24.dp)
+            .padding(ViewConstant.PaddingOutside)
             .width(240.dp)
     ) {
         ViewElementTitle(icon, title)

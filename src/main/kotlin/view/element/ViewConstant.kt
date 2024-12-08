@@ -1,8 +1,12 @@
 package view.element
 
+import androidx.compose.foundation.border
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+val DefaultBorderModifier = Modifier.border(width = 1.dp, color = Color.Gray)
 
 class ViewConstant {
     companion object {
@@ -11,11 +15,17 @@ class ViewConstant {
         val ColorOptionTitle = Color(225, 225, 225)
 
         // Font Size
-        val FontSizeOption = 14.sp
-        val FontSizeTitle = 18.sp
+        val FontLarge = 18.sp
+        val FontMedium = 16.sp
+        val FontSmall = 14.sp
 
-        // Size
-        val SizePadding = 8.dp
-        val SizeTitleIcon = 18.dp
+        // Icon Size
+        val IconLarge = 20.dp
+        val IconMedium = 16.dp
+        val IconSmall = 14.dp
+
+        // Padding
+        val PaddingOutside = 24.dp
+        val Padding = 8.dp
     }
 }
