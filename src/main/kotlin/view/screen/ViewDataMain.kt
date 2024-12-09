@@ -20,7 +20,7 @@ fun ViewDataMain() {
             ViewDataProcList()
         }
 
-        Column(
+        Box(
             modifier = Modifier
                 .weight(2f)
                 .fillMaxHeight()

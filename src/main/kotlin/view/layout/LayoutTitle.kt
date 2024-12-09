@@ -3,8 +3,7 @@ package view.layout
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import view.element.DefaultBorderModifier
-import view.element.ElementConstant
+import view.style.DefaultBorderModifier
 
 @Composable
 fun LayoutTitle(icon: @Composable () -> Unit, title: @Composable () -> Unit) {
@@ -14,13 +13,12 @@ fun LayoutTitle(icon: @Composable () -> Unit, title: @Composable () -> Unit) {
     ) {
         Column(
             modifier = DefaultBorderModifier
-                .width(ElementConstant.IconLarge)
         ) {
             icon()
         }
         Column(
             modifier = DefaultBorderModifier
-                .padding(start = ElementConstant.PaddingNarrow)
+                .padding(start = LayoutConstant.PaddingNarrow)
         ) { }
         Column(
             modifier = DefaultBorderModifier

@@ -1,4 +1,4 @@
-package view.element
+package view.style
 
 import androidx.compose.foundation.border
 import androidx.compose.ui.Modifier
@@ -8,11 +8,10 @@ import androidx.compose.ui.unit.sp
 
 val DefaultBorderModifier = Modifier.border(width = 1.dp, color = Color.Gray)
 
-class ElementConstant {
+class StyleConstant {
     companion object {
         // Color
         val ColorBorder = Color(225, 225, 225)
-        val ColorOptionTitle = Color(225, 225, 225)
 
         // Font Size
         val FontLarge = 18.sp
@@ -23,10 +22,5 @@ class ElementConstant {
         val IconLarge = 20.dp
         val IconMedium = 16.dp
         val IconSmall = 14.dp
-
-        // Padding
-        val PaddingWide = 24.dp
-        val PaddingMedium = 16.dp
-        val PaddingNarrow = 8.dp
     }
 }

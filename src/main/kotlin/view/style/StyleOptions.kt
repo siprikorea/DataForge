@@ -1,7 +1,7 @@
-package view.element
+package view.style
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun ElementOptions(options: Map<String, List<String>>) {
+fun StyleOptions(options: Map<String, List<String>>) {
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -20,9 +20,8 @@ fun ElementOptions(options: Map<String, List<String>>) {
 
         options.forEach { (key, options) ->
             Text(
-                text = key,
-                color = ElementConstant.ColorOptionTitle,
-                fontSize = ElementConstant.FontMedium,
+                text = "$key:",
+                fontSize = StyleConstant.FontMedium,
             )
             Option(options)
         }
@@ -31,14 +30,16 @@ fun ElementOptions(options: Map<String, List<String>>) {
 
 @Composable
 fun Option(options: List<String>) {
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(true) }
     var selectedIndex by remember { mutableStateOf(0) }
     if (options.isEmpty()) {
         return
     }
 
     Text(
-        options[selectedIndex], modifier = Modifier.clickable(onClick = { expanded = true })
+        options[selectedIndex],
+        modifier = Modifier
+            .clickable(onClick = { expanded = true } )
     )
     DropdownMenu(
         expanded = expanded, onDismissRequest = { expanded = false }

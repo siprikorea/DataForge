@@ -1,4 +1,4 @@
-package view.element
+package view.style
 
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -8,7 +8,7 @@ import androidx.compose.ui.text.font.FontWeight
 import view.layout.LayoutTitle
 
 @Composable
-fun ElementTitle(
+fun StyleTitle(
     icon: ImageVector,
     title: String
 ) {
@@ -23,7 +23,7 @@ fun ElementTitle(
             Text(
                 text = title,
                 fontWeight = FontWeight.Bold,
-                fontSize = ElementConstant.FontLarge,
+                fontSize = StyleConstant.FontLarge,
             )
         }
     )

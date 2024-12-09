@@ -6,8 +6,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import view.element.DefaultBorderModifier
-import view.element.ElementConstant
+import view.layout.LayoutConstant
+import view.style.DefaultBorderModifier
+import view.style.StyleConstant
 
 
 @Composable
@@ -18,9 +19,9 @@ fun LayoutFrame(
 ) {
     Column(
         modifier = Modifier
-            .border(2.dp, ElementConstant.ColorBorder, shape = RoundedCornerShape(24.dp))
+            .border(2.dp, StyleConstant.ColorBorder, shape = RoundedCornerShape(24.dp))
             .height(320.dp)
-            .padding(ElementConstant.PaddingWide)
+            .padding(LayoutConstant.PaddingWide)
             .width(240.dp)
     ) {
         Row(
@@ -30,7 +31,7 @@ fun LayoutFrame(
         ) {
             title()
         }
-        Row(modifier = Modifier.padding(top = ElementConstant.PaddingNarrow)) {}
+        Row(modifier = Modifier.padding(top = LayoutConstant.PaddingNarrow)) {}
         Row(
             modifier = DefaultBorderModifier
                 .height(32.dp)
@@ -38,7 +39,7 @@ fun LayoutFrame(
         ) {
             option()
         }
-        Row(modifier = Modifier.padding(top = ElementConstant.PaddingNarrow)) {}
+        Row(modifier = Modifier.padding(top = LayoutConstant.PaddingNarrow)) {}
         Row(
             modifier = DefaultBorderModifier
                 .fillMaxHeight()
