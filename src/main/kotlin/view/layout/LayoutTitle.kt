@@ -3,26 +3,22 @@ package view.layout
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import view.style.DefaultBorderModifier
+import androidx.compose.ui.Modifier
 
 @Composable
 fun LayoutTitle(icon: @Composable () -> Unit, title: @Composable () -> Unit) {
     Row(
-        modifier = DefaultBorderModifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(
-            modifier = DefaultBorderModifier
-        ) {
+        Column {
             icon()
         }
+        Spacer(
+            modifier = Modifier.width(LayoutConstant.PaddingNarrow)
+        )
         Column(
-            modifier = DefaultBorderModifier
-                .padding(start = LayoutConstant.PaddingNarrow)
-        ) { }
-        Column(
-            modifier = DefaultBorderModifier
-                .fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ) {
             title()
         }

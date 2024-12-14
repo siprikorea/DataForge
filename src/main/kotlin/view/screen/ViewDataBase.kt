@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.IntOffset
@@ -16,7 +17,6 @@ import kotlin.math.roundToInt
 
 @Composable
 fun ViewDataBase(
-    icon: ImageVector,
     title: String,
     options: Map<String, List<String>> = mapOf(),
     content: @Composable (modifier: Modifier) -> Unit,
@@ -34,7 +34,7 @@ fun ViewDataBase(
             }
         }) {
         LayoutFrame(
-            title = { StyleTitle(icon, title) },
+            title = { StyleTitle(Color.Red, title) },
             option = { StyleOptions(options) },
             content = { content(Modifier.fillMaxSize()) }
         )

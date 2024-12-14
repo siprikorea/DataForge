@@ -25,13 +25,11 @@ fun LayoutFrame(
             .width(240.dp)
     ) {
         Row(
-            modifier = DefaultBorderModifier
-                .height(32.dp)
-                .fillMaxWidth()
+            modifier = DefaultBorderModifier.height(32.dp).fillMaxWidth()
         ) {
             title()
         }
-        Row(modifier = Modifier.padding(top = LayoutConstant.PaddingNarrow)) {}
+        Spacer(modifier = Modifier.height(LayoutConstant.PaddingNarrow))
         Row(
             modifier = DefaultBorderModifier
                 .height(32.dp)
@@ -39,7 +37,7 @@ fun LayoutFrame(
         ) {
             option()
         }
-        Row(modifier = Modifier.padding(top = LayoutConstant.PaddingNarrow)) {}
+        Spacer(modifier = Modifier.height(LayoutConstant.PaddingNarrow))
         Row(
             modifier = DefaultBorderModifier
                 .fillMaxHeight()

@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun ViewDataInput() = ViewDataBase(
-    icon = Icons.Filled.CheckCircle,
     title = "Input",
     options = mapOf("Type" to listOf("Hex", "String"))
 ) {
