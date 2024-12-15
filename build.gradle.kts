@@ -24,6 +24,8 @@ dependencies {
     implementation("org.bouncycastle:bcpkix-jdk18on:1.79")
     implementation("org.bouncycastle:bcutil-jdk18on:1.79")
     implementation(compose.desktop.currentOs)
+    implementation(compose.material3)
+    implementation(compose.materialIconsExtended)
 }
 
 compose.desktop {
