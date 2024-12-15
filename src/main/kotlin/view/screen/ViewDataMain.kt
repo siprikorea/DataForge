@@ -26,6 +26,7 @@ fun ViewDataMain() {
                 .fillMaxHeight()
         ) {
             ViewDataInput()
+            ViewDataProcBase64Encoder()
         }
     }
 }

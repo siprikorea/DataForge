@@ -1,5 +1,6 @@
 package view.screen
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,6 +20,7 @@ fun LayoutFrame(
 ) {
     Column(
         modifier = Modifier
+            .background(StyleConstant.ColorBackground, shape = RoundedCornerShape(24.dp))
             .border(2.dp, StyleConstant.ColorBorder, shape = RoundedCornerShape(24.dp))
             .height(320.dp)
             .padding(LayoutConstant.PaddingWide)

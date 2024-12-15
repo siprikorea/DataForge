@@ -11,6 +11,7 @@ val DefaultBorderModifier = Modifier.border(width = 1.dp, color = Color.Gray)
 class StyleConstant {
     companion object {
         // Color
+        val ColorBackground = Color.White
         val ColorBorder = Color(225, 225, 225)
 
         // Font Size
